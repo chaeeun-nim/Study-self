@@ -1,0 +1,10 @@
+.alert-box {
+  background-color: skyblue;
+  padding: 1.25rem;
+  color: white;
+  border-radius: 0.25rem;
+  margin: 1.25rem;
+  display: none;
+  font-weight: 700;
+  font-size: 22px;
+}
