@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/02-alert.css" />
+  <title>03-funtion</title>
+</head>
+<body>
+  <div class="alert-box" id="alert">
+    알림창임
+    <button onclick="closeAlert()">
+      닫기
+    </button>
+  </div>
+  <button onclick="openAlert()">
+    버튼
+  </button>
+  <script>
+    function openAlert(){
+      document.getElementById('alert').style.display='block';
+    }
+    function closeAlert(){
+      document.getElementById('alert').style.display='none';
+    }
+  </script>
+</body>
+</html>

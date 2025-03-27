@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/02-alert.css" />
+  <title>03-funtion</title>
+</head>
+<body>
+  <div class="alert-box" id="alert">
+    <p id="alretText">알림창임</p>
+    <button onclick="openAlert('none')">
+      닫기
+    </button>
+  </div>
+  
+  <button onclick="changeText('아이디 입력하세요')">버튼1</button>
+  <button onclick="changeText('비번 입력하세요')">버튼2</button>
+  <script>
+    // 이렇게 구멍을 활용하면 함수 두개를 쓰지 않고, 1개만으로도 사용가능함.
+    // 필수 문법은 아니고, 필요할때 사용하면됨.
+    function openAlert(e){
+      document.getElementById('alert').style.display=e;
+    }
+    function changeText(e){
+      // 알림창을 연다
+      document.getElementById('alert').style.display='block';
+      // html을 바꾼다
+      document.getElementById('alretText').innerHTML=e;
+    }
+
+
+    // 콘솔에 계산기 띄우기
+    function plus(e){
+      return 2 + e;
+    }
+    console.log(plus(3));
+
+    // function closeAlert(){
+    //   document.getElementById('alert').style.display='none';
+    // }
+  </script>
+</body>
+</html>
