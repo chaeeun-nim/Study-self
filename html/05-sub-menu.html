@@ -9,10 +9,37 @@
   <link rel="stylesheet" href="/css/04-sub-menu.css" />
 </head>
 <body>
-  <div class="container">
-    <h1 class="text-center">Hello, Bootstrap!</h1>
-    <button class="btn btn-primary">Click Me</button>
-  </div>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand">Navbar</span>
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav> 
+
+  <ul class="list-group">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+
+  <script>
+    // 쿼리 셀렉터 선택자는 css선택자 문법을 그대로 사용함
+    // document.querySelector('.list-group')
+
+    // 올을 붙이면 전체 클래스를 다선택할 수 있고, 뒤에 인덱스 버튼 또 쓸수있음.
+    // document.querySelectorAll('.list-group')[1]
+
+    document.querySelector('.navbar-toggler').addEventListener('click',function(){
+      document.querySelector('.list-group').classList.toggle('show')
+    })
+    
+  </script>
+
+
   <!-- 복사한 JS 파일 연결 -->
   <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
