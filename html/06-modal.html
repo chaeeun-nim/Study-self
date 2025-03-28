@@ -26,6 +26,26 @@
         <title>모달창 만들기</title>
     </head>
     <body>
+        <button type="button" id="open" class="btn btn-primary">
+            모달창 띄우기
+        </button>
+
+        <div class="black-bg">
+            <div class="white-bg">
+                <h4>로그인하세요</h4>
+                <button class="btn btn-danger" id="close">닫기</button>
+            </div>
+        </div>
+
+        <script>
+            $('#open').on('click', function () {
+                $('.black-bg').addClass('show');
+            });
+
+            $('#close').on('click', function () {
+                $('.black-bg').removeClass('show');
+            });
+        </script>
         <!-- 복사한 JS 파일 연결 -->
         <script src="/js/bootstrap.bundle.min.js"></script>
     </body>
