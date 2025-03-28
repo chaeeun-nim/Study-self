@@ -8,27 +8,31 @@
 </head>
 <body>
   <div class="alert-box" id="alert">
-    <p id="alretText">알림창임</p>
-    <button onclick="openAlert('none')">
+    <p class="title1">알림창임</p>
+    <button id="close">
       닫기
     </button>
   </div>
   
-  <button onclick="changeText('아이디 입력하세요')">버튼1</button>
-  <button onclick="changeText('비번 입력하세요')">버튼2</button>
+  <button onclick="textChange('아이디 입력하세요')">버튼1</button>
+  <button onclick="textChange('비밀번호 입력하세요')">버튼2</button>
   <script>
     // 이렇게 구멍을 활용하면 함수 두개를 쓰지 않고, 1개만으로도 사용가능함.
     // 필수 문법은 아니고, 필요할때 사용하면됨.
-    function openAlert(e){
-      document.getElementById('alert').style.display=e;
-    }
-    function changeText(e){
-      // 알림창을 연다
-      document.getElementById('alert').style.display='block';
-      // html을 바꾼다
-      document.getElementById('alretText').innerHTML=e;
-    }
+    // function openAlert(e){
+    //   document.getElementById('alert').style.display=e;
+    // }
 
+    document.getElementById('close').addEventListener('click',function(){
+      document.getElementById('alert').style.display='none'
+    })
+
+    function textChange (e){
+      document.getElementById('alert').style.display='block';
+      // htmlcollection 객체 이기 때문에 index 번호를 지정해줘야 변경됨.
+      // 전체 클래스를 선택하려면 반복문사용해야함.
+      document.getElementsByClassName('title1')[0].innerHTML=e;
+    }
 
     // 콘솔에 계산기 띄우기
     function plus(e){
