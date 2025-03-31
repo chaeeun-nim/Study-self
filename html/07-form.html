@@ -70,6 +70,14 @@
         </div>
 
         <script>
+            // 이벤트 리스너 input, change 는 input에 입력값이 바뀔때마다 일어나는 이벤트
+            // 다른점은 체인지는 포커스를 잃었을때, 일어나는 이벤트임.
+            document
+                .getElementById('email')
+                .addEventListener('change', function () {
+                    console.log('껑껑');
+                });
+
             // 전송 버튼 누르면, 저기 input에 입력된 값이 공백이면, 알림창 띄워주세요
             // $('#submit').on('click', function () {
             //     const inputValue = $('form-control').val();
@@ -85,6 +93,7 @@
             //     }
             // });
 
+            // 전송버튼 눌렀을때, 각 상황에 맞춘 알림창 띄우기
             $('form').on('submit', function (e) {
                 if (document.getElementById('email').value == '') {
                     e.preventDefault();
