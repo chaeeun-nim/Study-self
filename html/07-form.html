@@ -95,6 +95,16 @@
 
             // 전송버튼 눌렀을때, 각 상황에 맞춘 알림창 띄우기
             $('form').on('submit', function (e) {
+                let idTest = document.getElementById('email').value;
+                let pwTest = document.getElementById('pw').value;
+                if (/\S+@\S+\.\S+/.test(idTest) == false) {
+                  alert('이메일 형식으로 작성하시오');
+                  e.preventDefault();
+                }
+                if (/[A-Z]/.test(pwTest) == false){
+                  e.preventDefault();
+                  alert('대문자를 포함하시오');
+                }
                 if (document.getElementById('email').value == '') {
                     e.preventDefault();
                     alert('아이디를 입력하세요');
