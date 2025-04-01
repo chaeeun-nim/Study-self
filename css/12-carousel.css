@@ -1,0 +1,16 @@
+.slide-container {
+    width: 300vw;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide-box {
+    width: 100vw;
+    float: left;
+
+    img {
+        width: 100%;
+    }
+}
+.overflow {
+    overflow: hidden;
+}
