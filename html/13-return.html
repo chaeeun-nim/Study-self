@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 리셋 -->
+        <link rel="stylesheet" href="/common/modern-reset.css" />
+        <!-- 폰트 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- 부트스트랩연결 -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <!-- css연결 -->
+        <!-- 제이쿼리 연결 -->
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <title>함수 return</title>
+    </head>
+    <body>
+        <script>
+            function ms(e, i) {
+                let time = e * 60 * 1000 + i * 1000;
+                return time;
+            }
+            console.log(ms(1, 30));
+            console.log(ms(2, 10));
+
+            function cost(e, i) {
+                let money = 0;
+                if (i) {
+                    money = e * 0.9 - 1.5;
+                } else {
+                    money = e * 0.9;
+                }
+                return money;
+            }
+            console.log(cost(70, false));
+            console.log(cost(10, true));
+        </script>
+        <!-- 복사한 JS 파일 연결 -->
+        <script src="/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
