@@ -1,0 +1,25 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+.navbar-brand{
+  transition: all 1s;
+    font-size: 30px;
+}
+
+.scroll-bar{
+  width: 100vw;
+  height: 2px;
+  background-color: yellow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}
+.red{
+  background-color: red;
+  height: 2px;
+  width: 0%;
+  transition: all .5s  ease-in-out;
+}

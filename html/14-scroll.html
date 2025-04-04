@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 리셋 -->
+        <link rel="stylesheet" href="/common/modern-reset.css" />
+        <!-- 폰트 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- 부트스트랩연결 -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <!-- css연결 -->
+        <link rel="stylesheet" href="/css/14-scroll.css" />
+        <!-- 제이쿼리 연결 -->
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <title>스크롤 이벤트</title>
+    </head>
+    <body>
+      <div class="scroll-bar"><div class="red"></div></div>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <span id="logo" class="navbar-brand">Navbar</span>
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+        <div style="height: 10000px; background-color: lightgray">
+        </div>
+        <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
+        </div> 
+        <script src="../js/14-scroll.js"></script>
+        <!-- 복사한 JS 파일 연결 -->
+        <script src="/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
