@@ -53,13 +53,23 @@ document.querySelectorAll('.tab-button')[2].addEventListener('click',function(){
 //   $('.tab-content').removeClass('show');
 //   $('.tab-content').eq(2).addClass('show');
 // })
-let btnCount = document.querySelectorAll('.tab-button').length;
-console.log(btnCount)
-for(let i = 0; i<btnCount;i++){
-  $('.tab-button').eq(i).on('click',function(){
-    $('.tab-button').removeClass('orange');
-    $('.tab-button').eq(i).addClass('orange');
-    $('.tab-content').removeClass('show');
-    $('.tab-content').eq(i).addClass('show');
-  })
+// let btnCount = document.querySelectorAll('.tab-button').length;
+// console.log(btnCount)
+// for(let i = 0; i<btnCount;i++){
+//   $('.tab-button').eq(i).on('click',function(){
+//     tabOpen(i);
+//   })
+// }
+
+$('.list').click(function(e){
+  let i =e.target.dataset.id;
+    tabOpen(i)
+})
+
+
+function tabOpen(i){
+  $('.tab-button').removeClass('orange');
+  $('.tab-button').eq(i).addClass('orange');
+  $('.tab-content').removeClass('show');
+  $('.tab-content').eq(i).addClass('show');
 }
