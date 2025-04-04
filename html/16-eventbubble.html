@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 리셋 -->
+        <link rel="stylesheet" href="/common/modern-reset.css" />
+        <!-- 폰트 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- 부트스트랩연결 -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <!-- css연결 -->
+        <link rel="stylesheet" href="/css/07-form.css" />
+        <!-- 제이쿼리 연결 -->
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <title>이벤트 버블</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <span class="navbar-brand">Navbar</span>
+                <button class="navbar-toggler" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <ul class="list-group">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+        </ul>
+        <div class="main-bg">
+            <h4>Shirts on Sale</h4>
+            <button type="button" id="open" class="btn btn-danger">
+                로그인
+            </button>
+        </div>
+        <!-- 모달창 -->
+        <div class="black-bg">
+            <div class="white-bg">
+                <h4>로그인하세요</h4>
+                <form action="../index.html">
+                    <div class="my-3">
+                        <input type="text" id="email" class="form-control" />
+                    </div>
+                    <div class="my-3">
+                        <input type="password" id="pw" class="form-control" />
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary">
+                        전송
+                    </button>
+                    <button type="button" class="btn btn-danger" id="close">
+                        닫기
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            // 이벤트 리스너 input, change 는 input에 입력값이 바뀔때마다 일어나는 이벤트
+            // 다른점은 체인지는 포커스를 잃었을때, 일어나는 이벤트임.
+            document
+                .getElementById('email')
+                .addEventListener('change', function () {
+                    console.log('껑껑');
+                });
+
+            // 전송 버튼 누르면, 저기 input에 입력된 값이 공백이면, 알림창 띄워주세요
+            // $('#submit').on('click', function () {
+            //     const inputValue = $('form-control').val();
+            //     if ($.trim(inputValue) === '') {
+            //         alert('아이디와 비밀번호를 입력하세요.');
+            //     }
+            // });
+
+            // $('form').on('submit', function (e) {
+            //     if (document.getElementById('email').value == '') {
+            //         alert('아이디와 비밀번호를 입력하세요.');
+            //         e.preventDefault();
+            //     }
+            // });
+
+            // 전송버튼 눌렀을때, 각 상황에 맞춘 알림창 띄우기
+            $('form').on('submit', function (e) {
+                let idTest = document.getElementById('email').value;
+                let pwTest = document.getElementById('pw').value;
+                if (/\S+@\S+\.\S+/.test(idTest) == false) {
+                  alert('이메일 형식으로 작성하시오');
+                  e.preventDefault();
+                }
+                if (/[A-Z]/.test(pwTest) == false){
+                  e.preventDefault();
+                  alert('대문자를 포함하시오');
+                }
+                if (document.getElementById('email').value == '') {
+                    e.preventDefault();
+                    alert('아이디를 입력하세요');
+                } else if (document.getElementById('pw').value == '') {
+                    e.preventDefault();
+                    alert('비밀번호를 입력하세요');
+                } else if (document.getElementById('pw').value.length < 6) {
+                    e.preventDefault();
+                    alert('비밀번호를 6글자 이상 입력하세요');
+                }
+            });
+            // if를 여러개를 쓰는것과 else를 붙여서 쓰는방법은, 1단이 참인경우 뒤는 skip하게됨.
+            // if를 하면 다 검사하게됨.
+            if (1 == 3) {
+                console.log('맞다껑!');
+            } else if (1 == 2) {
+                console.log('이번엔 맞다껑!');
+            } else {
+                console.log('다 틀렸껑..!');
+            }
+
+            // 서브메뉴 펼치기
+            document
+                .querySelector('.navbar-toggler')
+                .addEventListener('click', function () {
+                    document
+                        .querySelector('.list-group')
+                        .classList.toggle('show');
+                });
+            // 모달창
+            $('#open').on('click', function () {
+                $('.black-bg').addClass('show-modal');
+            });
+
+            $('#close').on('click', function () {
+                $('.black-bg').removeClass('show-modal');
+            });
+        </script>
+        <!-- 복사한 JS 파일 연결 -->
+        <script src="/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/16-eventbubble.js"></script>
+    </body>
+</html>
