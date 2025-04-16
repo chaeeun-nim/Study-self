@@ -5,7 +5,7 @@ ul.list {
   border-bottom: 1px solid #ccc;
 }
 ul.list::after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -33,4 +33,12 @@ ul.list::after {
 }
 .show {
   display: block;
+}
+
+/* #shirts-size {
+  display: none;
+} */
+
+.dis-none {
+  display: none;
 }

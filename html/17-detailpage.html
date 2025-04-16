@@ -1,55 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko-KR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- 리셋 -->
-        <link rel="stylesheet" href="/common/modern-reset.css" />
-        <!-- 폰트 -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 리셋 -->
+    <link rel="stylesheet" href="/common/modern-reset.css" />
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- 부트스트랩연결 -->
-        <link rel="stylesheet" href="/css/bootstrap.min.css" />
-        <!-- css연결 -->
-        <link rel="stylesheet" href="/css/05-tab.css" />
-        <!-- 제이쿼리 연결 -->
-        <script
-            src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            crossorigin="anonymous"
-        ></script>
-        <title>상세페이지</title>
-    </head>
-    <body>
-      <div class="container mt-3">
-        <div class="card p-3">
-          상품명 / 가격
-        </div>
+    <!-- 부트스트랩연결 -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- css연결 -->
+    <link rel="stylesheet" href="/css/05-tab.css" />
+    <!-- 제이쿼리 연결 -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <title>상세페이지</title>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <div class="card p-3">상품명 / 가격</div>
+    </div>
+    <div class="container mt-5">
+      <ul class="list">
+        <li class="tab-button" data-id="0">Products</li>
+        <li class="tab-button orange" data-id="1">Information</li>
+        <li class="tab-button" data-id="2">Shipping</li>
+      </ul>
+      <div class="tab-content">
+        <p>상품설명입니다. Product</p>
       </div>
-      <div class="container mt-5">
-        <ul class="list">
-          <li class="tab-button" data-id="0">Products</li>
-          <li class="tab-button orange" data-id="1">Information</li>
-          <li class="tab-button" data-id="2">Shipping</li>
-        </ul>
-        <div class="tab-content">
-          <p>상품설명입니다. Product</p>
-        </div>
-        <div class="tab-content show">
-          <p>스펙설명입니다. Information</p>
-        </div>
-        <div class="tab-content">
-          <p>배송정보입니다. Shipping</p>
-        </div>
-      </div> 
-      <script src="../js/15-tab.js"></script>
-      <script src="../js/17-detail.js"></script>
-        <!-- 복사한 JS 파일 연결 -->
-        <script src="/js/bootstrap.bundle.min.js"></script>
-    </body>
+      <div class="tab-content show">
+        <p>스펙설명입니다. Information</p>
+      </div>
+      <div class="tab-content">
+        <p>배송정보입니다. Shipping</p>
+      </div>
+    </div>
+    <form class="container my-5 form-group">
+      <p>상품선택</p>
+      <select id="products" class="form-select mt-2">
+        <option value="cap">모자</option>
+        <option value="shirts">셔츠</option>
+        <option value="pants">바지</option>
+      </select>
+      <select id="shirts-size" class="form-select mt-2 dis-none">
+        <option>95</option>
+        <option>100</option>
+      </select>
+    </form>
+
+    <script src="../js/15-tab.js"></script>
+    <script src="../js/17-detail.js"></script>
+    <script src="../js/20-select-input.js"></script>
+    <!-- 복사한 JS 파일 연결 -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

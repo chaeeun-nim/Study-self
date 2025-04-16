@@ -4,8 +4,7 @@
     "format": "prettier . --check"
   },
   "devDependencies": {
-    "live-server": "^1.2.2",
-    "prettier": "^3.5.3"
+    "live-server": "^1.2.2"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"

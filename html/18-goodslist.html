@@ -1,58 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko-KR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- 리셋 -->
-        <link rel="stylesheet" href="/common/modern-reset.css" />
-        <!-- 폰트 -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 리셋 -->
+    <link rel="stylesheet" href="/common/modern-reset.css" />
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- 부트스트랩연결 -->
-        <link rel="stylesheet" href="/css/bootstrap.min.css" />
-        <!-- css연결 -->
-        <!-- 제이쿼리 연결 -->
-        <script
-            src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            crossorigin="anonymous"
-        ></script>
-        <title>상품리스트</title>
-    </head>
-    <body>
-        <div class="card-group container">
-            <div class="card">
-                <!-- <img src="https://via.placeholder.com/600" /> -->
-                <div class="card-body">
-                    <h5>Card title</h5>
-                    <p>가격 : 70000</p>
-                    <button class="btn btn-danger">주문하기</button>
-                </div>
-            </div>
-            <div class="card">
-                <!-- <img src="https://via.placeholder.com/600" /> -->
-                <div class="card-body">
-                    <h5>Card title</h5>
-                    <p>가격 : 70000</p>
-                    <button class="btn btn-danger">주문하기</button>
-                </div>
-            </div>
-            <div class="card">
-                <!-- <img src="https://via.placeholder.com/600" /> -->
-                <div class="card-body">
-                    <h5>Card title</h5>
-                    <p>가격 : 70000</p>
-                    <button class="btn btn-danger">주문하기</button>
-                </div>
-            </div>
-        </div>
-        <!-- 복사한 JS 파일 연결 -->
-        <script src="../js/19-goodslist.js"></script>
-        <script src="/js/bootstrap.bundle.min.js"></script>
-    </body>
+    <!-- 부트스트랩연결 -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <!-- css연결 -->
+    <!-- 제이쿼리 연결 -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <title>상품리스트</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- <div class="col-sm-4">
+          <img src="https://via.placeholder.com/600" class="w-100" />
+          <h5>Card title</h5>
+          <p>가격 : 70000</p>
+        </div> -->
+      </div>
+    </div>
+    <div class="container"><button class="btn btn-danger">더보기</button></div>
+    <!-- 복사한 JS 파일 연결 -->
+    <!-- <script src="../js/19-goodslist.js"></script> -->
+    <script src="../js/23-goodslist.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // $.get("https://codingapple1.github.io/hello.txt")
+      //   .done(function (data) {
+      //     console.log(data);
+      //   })
+      //   .fail(function () {
+      //     console.log("실패");
+      //   });
+      // $.get("https://codingapple1.github.io/price.json")
+      //   .done(function (data) {
+      //     console.log(data.price);
+      //   })
+      //   .fail(function () {
+      //     console.log("실패");
+      //   });
+
+      // fetch("https://codingapple1.github.io/price.json")
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     console.log(data.price);
+      //   });
+    </script>
+  </body>
 </html>
